@@ -26,7 +26,7 @@ def home_page():
         f'/api/v1.0/stations<br/>'
         f'/api/v1.0/tobs<br/>'
         f'/api/v1.0/<start><br/>'
-        f'/api/v1.0/<start>/<end>'
+        f'/api/v1.0/<start><end>'
     )
 
 #--------------------------------------------------------
@@ -121,7 +121,7 @@ def start_date(start):
 
     return jsonify(all_TMIN)
 #--------------------------------------------------------
-@app.route('/api/v1.0/<start>/<end>')
+@app.route('/api/v1.0/<start><end>')
 def start_end_date(start, end):
 
     # Define TMIN, MAX, and TAVG
